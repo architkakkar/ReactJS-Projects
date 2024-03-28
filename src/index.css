@@ -20,12 +20,20 @@ body {
 }
 
 .navbar {
-  background-color: #21222a;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 25px 30px;
   flex-wrap: wrap;
+  border-bottom: 1px solid #21222a;
+}
+
+.navbar-dark {
+  background-color: #21222a;
+}
+
+.navbar-light {
+  background-color: #ffffff;
 }
 
 .nav-logo {
@@ -43,17 +51,82 @@ body {
   font-size: 22px;
 }
 
-.nav-text {
-  color: #deebf8;
+.toggler {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-dark .toggler-darkText {
+  color: #ffffff;
+}
+
+.navbar-light .toggler-darkText {
+  color: #918e9b;
+}
+
+.navbar-dark .toggler-lightText {
+  color: #918e9b;
+}
+
+.navbar-light .toggler-lightText {
+  color: #21222a;
+}
+
+.toggler p {
+  font-size: 0.65rem;
   font-weight: 600;
-  padding-left: 10px;
+}
+
+.toggler-slider {
+  width: 25px;
+  height: 12.5px;
+  border-radius: 2rem;
+  margin-inline: 7px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  box-sizing: content-box;
+}
+
+.toggler-slider-dark {
+  background-color: #ffffff;
+  border: 1.5px solid #ffffff;
+  justify-content: flex-end;
+}
+
+.toggler-slider-light {
+  background-color: #21222a;
+  border: 1.5px solid #21212a;
+  justify-content: flex-start;
+}
+
+.navbar-dark .toggler-slider-circle {
+  height: 12.5px;
+  width: 12.5px;
+  background-color: #21222a;
+  border-radius: 50%;
+}
+
+.navbar-light .toggler-slider-circle {
+  height: 12.5px;
+  width: 12.5px;
+  background-color: #ffffff;
+  border-radius: 50%;
 }
 
 .container {
-  background-color: #282d35;
   padding: 40px 30px;
-  color: #ffffff;
   position: relative;
+}
+
+.main-dark {
+  background-color: #282d35;
+  color: #ffffff;
+}
+
+.main-light {
+  background-color: #ffffff;
+  color: #282d35;
 }
 
 .heading {
@@ -76,7 +149,7 @@ body {
   font-size: 22px;
 }
 
-.bg-reactlogo {
+.main-dark .bg-reactlogo {
   /* styling for react.svg image */
   /* filter: grayscale(1) contrast(100) brightness(0.25); */
   /* position: absolute; */
@@ -89,4 +162,11 @@ body {
   position: absolute;
   top: 20%;
   right: 0;
+}
+
+.main-light .bg-reactlogo {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  filter: opacity(0.1);
 }
